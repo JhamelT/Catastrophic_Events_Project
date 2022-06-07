@@ -48,14 +48,3 @@ SELECT * FROM low_damage;
 -- Max caus by event -- 
 DROP VIEW IF EXISTS Max_caus_by_event;
 CREATE VIEW Max_caus_by_event AS
-Keaunna Cleveland
-You should not include special characters in the name of your views as we can't be sure how this might work across machines and with different SQL versions.
-
-(no points taken off)
-[...]
-SELECT e.event_type, MAX(casualties) as casualties
-FROM catastrophic_events
-JOIN event_types e USING (event_id)
-GROUP BY event_type
-ORDER BY casualties ASC;
-SELECT * FROM Max_caus_by_event;
